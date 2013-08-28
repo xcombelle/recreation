@@ -20,11 +20,10 @@ Ce bot permet de lister la liste des pages recrées
 
 usage typique
 
-```
 python -m recreation.recreation --prefix 'Utilisateur:Xavier Combelle Bot/Journal des recréations'
-```
+
 ou
-```
+
 python -m recreation.recreation --prefix 'Utilisateur:Xavier Combelle Bot/Journal des recréations' --verbose
 avec recreation.timestamp.txt un fichier contenant une seule ligne au format
 
