@@ -211,6 +211,8 @@ def process(day):
     day -- python date format
     
     """
+    if params.verbose:
+        print("processing Journal des recréations ({day})".format(day=format_date(day)))
     start = to_date(day)
     end = to_date(day+ONE_DAY)
     result = "\n== {} ==\n".format(format_date(day))
@@ -231,7 +233,7 @@ def process(day):
         result = page.get()+result
     except NoPage:
         pass
-    page.put(result,comment="Journal des recréation")
+    page.put(result,comment="Journal des recréations ({day})".format(day=format_date(day)))
 
 if __name__ == "__main__" : 
 
