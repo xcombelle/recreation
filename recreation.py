@@ -18,7 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>
 
 Ce bot permet de lister la liste des pages recrées
 
-usage typique (depuis un répertoire recreation contenant recreation.py et __init__.py)
+usage typique
 
 ```
 python -m recreation.recreation --prefix 'Utilisateur:Xavier Combelle Bot/Journal des recréations'
@@ -29,6 +29,8 @@ python -m recreation.recreation --prefix 'Utilisateur:Xavier Combelle Bot/Journa
 avec recreation.timestamp.txt un fichier contenant une seule ligne au format
 
 2013-08-10
+
+qui est la dernière date à laquelle le bot a été lancée
 
 """
 
