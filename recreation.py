@@ -20,10 +20,12 @@ Ce bot permet de lister la liste des pages recrées
 
 usage typique (depuis un répertoire recreation contenant recreation.py et __init__.py)
 
+```
 python -m recreation.recreation --prefix 'Utilisateur:Xavier Combelle Bot/Journal des recréations'
+```
 ou
+```
 python -m recreation.recreation --prefix 'Utilisateur:Xavier Combelle Bot/Journal des recréations' --verbose
-
 avec recreation.timestamp.txt un fichier contenant une seule ligne au format
 
 2013-08-10
@@ -234,7 +236,10 @@ if __name__ == "__main__" :
 
     parser = argparse.ArgumentParser(description='recreaction bot for french wikipedia.')
     parser.add_argument('--verbose', help="enable verbose output", action='store_true')
-    parser.add_argument('--prefix', help="prefix of the list page of recreation example: 'Utilisateur:Xavier Combelle Bot'", action='store')
+    parser.add_argument('--prefix', 
+                       help="prefix of the list page of recreation example: 'Utilisateur:Xavier Combelle Bot/journal des recréations'", 
+                       action='store',
+                       required = True)
     
     params = parser.parse_args()
     if sys.version_info < (3, 0):
