@@ -222,7 +222,11 @@ def process(day):
     
         dl = deletelog(page["title"])
         if dl:
-            r = "* {{{{a|{title}}}}} supprimé le {date} recréé par {{{{u|{user}}}}} \n".format(title=wiki_param(page["title"]) ,user=wiki_param(page["user"]),date=format_date(from_date(dl["timestamp"])))
+            r = ("* {{{{a-court|{title}}}}} <small>([[{pas}|PàS]])</small> supprimé le {date} recréé par {{{{u|{user}}}}} \n"
+                    .format(title = wiki_param(page["title"]) ,
+                            pas = wiki_param("Discussion:"+page[title]+"/Suppression")
+                            user = wiki_param(page["user"]),
+                            date = format_date(from_date(dl["timestamp"]))))
             if params.verbose:
                 print(r)
             result += r
